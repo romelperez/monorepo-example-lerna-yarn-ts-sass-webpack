@@ -1,0 +1,10 @@
+{
+  "name": "@myproject/calculator",
+  "version": "1.0.0",
+  "private": true,
+  "main": "src/index.js",
+  "dependencies": {
+    "@myproject/sum": "1.0.0",
+    "@myproject/multiply": "1.0.0"
+  }
+}
