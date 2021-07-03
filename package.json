@@ -1,5 +1,5 @@
 {
-  "name": "lerna-yarn-webpack",
+  "name": "myproject",
   "version": "1.0.0",
   "private": true,
   "workspaces": [

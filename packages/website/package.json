@@ -25,7 +25,7 @@
   },
   "scripts": {
     "clean": "rimraf ./public",
-    "build": "cross-env NODE_ENV=production webpack --progress",
+    "build": "npm run clean && cross-env NODE_ENV=production webpack --progress",
     "dev": "webpack serve",
     "serve": "serve ./public"
   }
