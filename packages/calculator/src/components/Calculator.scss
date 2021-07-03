@@ -1,0 +1,16 @@
+.calculator {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #444;
+  padding: 20px;
+
+  input[type="number"],
+  button {
+    font-family: inherit;
+    font-size: inherit;
+  }
+
+  &__row {
+    margin-bottom: 20px;
+  }
+}
