@@ -2,6 +2,7 @@ const path = require('path');
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const { NODE_ENV = 'development' } = process.env;
 const isProduction = NODE_ENV === 'production';
@@ -31,6 +32,20 @@ module.exports = {
             }
           }
         ]
+      },
+      {
+        test: /\.s[ac]ss$/i,
+        use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          {
+            loader: 'sass-loader',
+            options: {
+              implementation: require('sass'),
+              sourceMap: !isProduction
+            }
+          }
+        ]
       }
     ]
   },
@@ -49,6 +64,7 @@ module.exports = {
       chunks: ['app'],
       showErrors: true
     }),
+    new MiniCssExtractPlugin(),
     new CopyWebpackPlugin({
       patterns: [{
         from: path.join(__dirname, 'static'),
@@ -58,7 +74,7 @@ module.exports = {
   ],
   devServer: {
     host: '127.0.0.1',
-    port: 9100,
+    port: 5000,
     watchContentBase: true,
     disableHostCheck: true,
     compress: true,
