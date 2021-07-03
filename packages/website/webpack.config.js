@@ -18,7 +18,7 @@ module.exports = {
   },
   output: {
     path: path.join(__dirname, 'public'),
-    filename: '[name].js'
+    filename: '[name].[contenthash].js'
   },
   module: {
     rules: [
@@ -66,7 +66,9 @@ module.exports = {
       chunks: ['app'],
       showErrors: true
     }),
-    new MiniCssExtractPlugin(),
+    new MiniCssExtractPlugin({
+      filename: '[name].[contenthash].css'
+    }),
     new CopyWebpackPlugin({
       patterns: [{
         from: path.join(__dirname, 'static'),

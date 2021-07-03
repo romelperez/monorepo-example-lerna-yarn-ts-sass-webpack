@@ -33,11 +33,11 @@ const Calculator = (): ReactElement => {
         />
       </div>
       <div className='calculator__row'>
-        <button onClick={() => setResult(sum(n1, n2))}>Sum</button>{' '}
-        <button onClick={() => setResult(multiply(n1, n2))}>Multiply</button>
+        <button id='sum' onClick={() => setResult(sum(n1, n2))}>Sum</button>{' '}
+        <button id='multiply' onClick={() => setResult(multiply(n1, n2))}>Multiply</button>
       </div>
       <div className='calculator__row'>
-        Result: <b>{result}</b>
+        Result: <b id='result'>{result}</b>
       </div>
     </div>
   );
