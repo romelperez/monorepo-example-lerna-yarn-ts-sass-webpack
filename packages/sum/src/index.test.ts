@@ -3,5 +3,7 @@
 import { sum } from './index';
 
 test('Should sum two numbers', () => {
-  expect(sum(2, 3)).toBe(5);
+  const received = sum(3, 4);
+  const expected = 7;
+  expect(received).toBe(expected);
 });

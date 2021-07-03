@@ -3,5 +3,7 @@
 import { multiply } from './index';
 
 test('Should multiply two numbers', () => {
-  expect(multiply(2, 3)).toBe(6);
+  const received = multiply(3, 4);
+  const expected = 12;
+  expect(received).toBe(expected);
 });
