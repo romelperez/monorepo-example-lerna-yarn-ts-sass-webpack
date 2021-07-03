@@ -1,5 +1,7 @@
 # Monorepo Example
 
+![ci](https://github.com/romelperez/monorepo-example-lerna-yarn-ts-sass-webpack/workflows/ci/badge.svg)
+
 A monorepo example private project with the following technologies and tools:
 
 - [Node.js](https://nodejs.org) v14+
