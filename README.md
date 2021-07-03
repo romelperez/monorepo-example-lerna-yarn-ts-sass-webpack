@@ -14,7 +14,16 @@ A monorepo example private project with the following technologies and tools:
 - [StyleLint](https://stylelint.io) v13+
 - [Jest](https://jestjs.io) v27+
 
+See [production website preview](https://romelperez-monorepo-example-lerna-yarn-ts-sass-webpack.netlify.app).
+
 ## Setup
+
+Install global dependencies:
+
+- [Node.js](https://nodejs.org) v14+
+- [Yarn](https://yarnpkg.com) v1.22+
+
+Install project dependencies:
 
 ```bash
 yarn install
